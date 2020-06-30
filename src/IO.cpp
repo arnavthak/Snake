@@ -40,9 +40,34 @@ void IO::Print() {
 }
 
 void IO::Write() {
-
+    std::ofstream out(filename);
+    std::map<std::string, int>::iterator it;
+    for (it = scores.begin(); it != scores.end(); it++) {
+        out << it->first << " " << it->second << '\n';
+    }
 }
 
 void IO::Add(const int point) {
+    std::string player;
+    char response;
     
+    std::map<std::string, int>::iterator it;
+    std::cout << "Name: ";
+
+    while (std::cin >> player) {
+        it = scores.find(player);
+        if (it != scores.end()) {
+            std::cout << "Name already present... Type y to override or n to not." << std::endl;
+            std::cin >> response;
+            if (response == 'y') {
+                break;
+            } else {
+                std::cout << "Name: ";
+            }
+        } else {
+            break;
+        }
+    }
+
+    scores[player] = point;
 }
