@@ -19,6 +19,7 @@ IO::IO(std::string path) : filename(path) {
 void IO::Print() {
     if (scores.empty()) {
         std::cout << "No record is available!" << std::endl;
+        std::cout << std::endl;
         return;
     }
     
@@ -37,6 +38,7 @@ void IO::Print() {
     for (int i = 0; i < sortScores.size(); i++) {
         std::cout << sortScores[i].first << " " << sortScores[i].second << std::endl;
     }
+    std::cout << std::endl;
 }
 
 void IO::Write() {
@@ -45,6 +47,7 @@ void IO::Write() {
     for (it = scores.begin(); it != scores.end(); it++) {
         out << it->first << " " << it->second << '\n';
     }
+    std::cout << std::endl;
 }
 
 void IO::Add(const int point) {
@@ -70,4 +73,5 @@ void IO::Add(const int point) {
     }
 
     scores[player] = point;
+    std::cout << std::endl;
 }
