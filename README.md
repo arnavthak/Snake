@@ -29,7 +29,7 @@ In this project, you can build your own C++ application or extend this Snake gam
 4. Run it: `./SnakeGame`.
 
 ## Code Structure
-# Classes
+### Classes
 1. Game - the class that holds the game loop inside of it and handles the logic of the game and uses other classes to handle the game.
 2. Controller - the class that handles input for the game loop and is used inside the function Game::Run to update the game based on user input.
 3. Renderer - the class that handles the rendering of the game and is passed to Game::Run to be used in the game loop to render the game window and update the graphics.
@@ -37,7 +37,7 @@ In this project, you can build your own C++ application or extend this Snake gam
 5. IO - the class that handles the input/output of the menu and reads and writes to the file leaderboard.txt in data, and can print the contents of the file for us.
 6. Menu - the class that handles the user input to decide what to do in main.cpp
 
-# Files
+### Files
 1. main.cpp - the file where the int main() function is created and the file where all of the classes are tied together to make the actual logic that is executed.
 
 ## Rubric
